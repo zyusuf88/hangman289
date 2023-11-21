@@ -13,8 +13,7 @@ def check_guess(guess):
 
 # Check if the letter guessed is a  single alphabetical character and lowercase.
 if ask_for_input.isalpha() and len(guess) == 1:
-    
-        if guess in users_guess:
+     if guess in users_guess:
             print(f"Good guess! {guess} is in the word.")
         else:
           print(f"Sorry the letter {guess} is not in the word. Try agian")
