@@ -3,15 +3,14 @@ import random
 # Step 0: Choose a secret word
 word_list = ['kiwi', 'strawberry',  'mango', 'apple', 'orange' ]
 users_guess = random.choice(word_list)
-
-def check_guess(guess):
-    guess = guess.lower()
-
-
 def ask_for_input():
     while True:
     # ask the user to guess a letter 
        guess = input("Guess a letter: ")
+
+def check_guess(guess):
+    guess = guess.lower()
+
 # Check if the letter guessed is a  single alphabetical character and lowercase.
 if ask_for_input.isalpha() and len(guess) == 1:
     
