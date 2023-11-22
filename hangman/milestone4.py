@@ -34,9 +34,13 @@ def check_guess(self, guess):
      if letter == guess:
         self.word_guessed[i] = guess
         self.num_letters -= 1
-   
     else:
-        pass
+        # Reduce num_lives by 1
+            self.num_lives -= 1
+        
+            print(f"Sorry, {guess} is not in the word.")
+           
+            print(f"You have {self.num_lives} lives left.")
 
 
 
@@ -58,6 +62,8 @@ def ask_for_input(self):
 
 hangman_game = Hangman(['kiwi', 'strawberry',  'mango', 'apple', 'orange' ])
 print(f"Chosen word: {hangman_game.word}")
+
+hangman_game.ask_for_input()
     
 
 
