@@ -15,7 +15,7 @@ def check_guess(guess):
 if ask_for_input.isalpha() and len(guess) == 1:
      if guess in users_guess:
             print(f"Good guess! {guess} is in the word.")
-        else:
+     else:
           print(f"Sorry the letter {guess} is not in the word. Try agian")
 else:
          # if the guess is not valid an error message is printed, and the loop continues.
