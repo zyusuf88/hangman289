@@ -1,6 +1,7 @@
 import random
 
 
+
 class Hangman:
     def __init__(self, word_list, num_lives=5):
         # nitialise the attributes
@@ -59,11 +60,27 @@ def ask_for_input(self):
                 # Append the guess
                 self.list_of_guesses.append(guess)
 
+def play_game(word_list):
+    num_lives=5
+    game = Hangman(word_list, num_lives)
+    while True:
+        if game.num_lives == 0:
+            print('You lost!')
+            break
 
-hangman_game = Hangman(['kiwi', 'strawberry',  'mango', 'apple', 'orange' ])
+        # Check if num_letters is greater than 0
+        elif game.num_letters > 0:
+            game.ask_for_input()
+
+        # If num_lives is not 0 and num_letters is not greater than 0, the user has won
+        else:
+            print('Congratulations. You won the game!')
+            break
+
+
+if __name__ == "__main__":
+    word_list =(['kiwi', 'strawberry',  'mango', 'apple', 'orange' ])
 print(f"Chosen word: {hangman_game.word}")
 
-hangman_game.ask_for_input()
-    
 
-
+play_game(word_list)
