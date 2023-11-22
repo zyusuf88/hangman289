@@ -20,7 +20,7 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 <strong> Usage instructions:  </strong>
 
 
-- This game selects any random word from the file and asks you to guess character for that word. You will get .... chances to guess a word. when you guesses correct character your chance will not be counted when you gives wrong character your chance will be reduced by one.
+- This game selects any random word from the file and asks you to guess character for that word. You will get 5 chances to guess a word. when you guesses correct character your chance will not be counted when you gives wrong character your chance will be reduced by one.
 
 
 <strong>   File structure of the project: </strong>
