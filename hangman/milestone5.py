@@ -56,7 +56,7 @@ class Hangman:
 
     def ask_for_input(self):
         print(f"Current word: {' '.join(self.word_guessed)}")
-        print(f"Number of letters: {self.num_letters}")
+        print(f"Number of letters to guess: {self.num_letters}")
         guess = input("Guess a letter: ")
 
         # If statement that runs if the guess is NOT a single alphabetical character
@@ -84,12 +84,14 @@ def play_game(word_list):
     while game.num_lives > 0:
         game.ask_for_input()
 
-        # Check if the user has guessed all the letters
-        if game.num_letters == 0:
-            print('Congratulations. You won the game!')
+         # Check if the user has guessed the full word
+        if '_' not in game.word_guessed:
+            print(f'Congratulations. You won the game! The word is: {game.word}')
             break
-    else:
-        print('Sorry, You lost!')
+         # Check if the user has lost the game
+        if game.num_lives == 0:
+         print(f'Sorry, You lost! The correct word was: {game.word}')
+
 
 if __name__ == "__main__":
     word_list = ['kiwi', 'strawberry', 'mango', 'apple', 'orange']
