@@ -25,7 +25,7 @@ This is an implementation of the Hangman game, where the computer thinks of a wo
 
 <strong>   File structure of the project: </strong>
 
-- README.md: This file, providing information about the project.
+- README.md: This file provides information about the project.
 - milestone_5.py : The main script containing the Hangman game logic.
 
 
