@@ -94,6 +94,6 @@ def play_game(word_list):
 
 
 if __name__ == "__main__":
-    word_list = ['kiwi', 'strawberry', 'mango', 'apple', 'orange']
+    word_list = ['kiwi', 'grape', 'mango', 'apple', 'plum', 'peach', 'guava']
     # Call the play_game function with the word_list
     play_game(word_list)
